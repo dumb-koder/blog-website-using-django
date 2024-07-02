@@ -4,4 +4,4 @@ This project allows you to create an account, post articles, edit articles, sear
 
 ## Demo Video
 
-![Watch the demo video here](https://github.com/dumb-koder/blog-website-using-django/blob/main/Blog%20Website.mp4)
+![video here](Blog_Website.mp4)
