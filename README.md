@@ -1,2 +1,7 @@
-# blog-website-using-django
-You can Create Account, Post Articles, Edit Articles, Search Articles, Filter Articles By Categories.
+# Blog Website Using Django
+
+This project allows you to create an account, post articles, edit articles, search articles, and filter articles by categories using Django.
+
+## Demo Video
+
+[Watch the demo video here]([link_to_your_video](https://github.com/dumb-koder/blog-website-using-django/blob/main/Blog%20Website.mp4))
