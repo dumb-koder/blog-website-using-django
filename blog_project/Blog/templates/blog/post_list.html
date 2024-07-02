@@ -1,0 +1,43 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Posts{% endblock title %}
+
+{% block content %}
+    <h2>Posts</h2>
+    
+    {% for post in page_obj %}
+    
+        <article>
+            <h3><a href="{% url 'post_detail' post.id %}"> {{post.title}} </a></h3>
+            <p>{{post.content|truncatechars:30}}</p>
+            <p>Author : {{post.author.username}} | Date : {{post.pub_date|date:"F d, Y"}}</p>
+        </article>
+    
+    {% endfor %}
+
+    {% if page_obj.has_other_page %}
+    
+        <div class="pagination">
+
+            {% if page_obj.has_previous %}
+            <a> href='?page={{ page_obj.previous_page_number }}'&laquo; Previous</a>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                    <span>{{ num }}</span>
+                {% else %}
+                    <a href='?page={{ num }}'> {{ num }} </a>
+                {% endif %}
+            {% endfor %}
+            
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">Next &raquo;</a>
+            {% endif %}
+
+        </div>
+    
+    {% endif %}
+
+
+{% endblock content %}
